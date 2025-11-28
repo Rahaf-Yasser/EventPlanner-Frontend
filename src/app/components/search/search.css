@@ -1,0 +1,123 @@
+
+.search-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.search-card {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.search-card h2 {
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #0066ff;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #0052cc;
+}
+
+.btn.danger {
+  background: #ff5252;
+  color: #fff;
+}
+
+.btn.danger:hover {
+  background: #e84343;
+}
+
+/* 🔥 Layout for results + filter panel */
+.content-wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+/* RIGHT SIDE FILTER PANEL */
+.filter-panel {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: fit-content;
+}
+
+.filter-panel h3 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.filter-panel label {
+  margin-top: 10px;
+  font-size: 14px;
+  display: block;
+}
+
+.results-section {
+  flex: 1;
+}
+
+/* EVENT CARD */
+.event-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.event-card .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.event-card .desc {
+  margin: 10px 0;
+  color: #555;
+}
+
+.no-results {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: #f5f5f5;
+  color: #555;
+}

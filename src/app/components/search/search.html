@@ -1,0 +1,67 @@
+<div class="search-container">
+
+  <div class="search-card">
+    <h2>Search Events</h2>
+
+    <div class="row">
+      <input
+        type="text"
+        class="input"
+        placeholder="Search keyword..."
+        [(ngModel)]="keyword">
+    </div>
+
+    <div class="btn-row">
+      <button class="btn primary" (click)="search()">Search</button>
+      <button class="btn danger" (click)="clear()">Clear</button>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+
+    <div class="filter-panel">
+      <h3>Filters</h3>
+
+      <label>Role</label>
+      <select class="input" [(ngModel)]="role">
+        <option value="">Any</option>
+        <option value="Organizer">Organizer</option>
+        <option value="Attendee">Attendee</option>
+      </select>
+
+      <label>Start From</label>
+      <input type="datetime-local" class="input" [(ngModel)]="start">
+
+      <label>End Before</label>
+      <input type="datetime-local" class="input" [(ngModel)]="end">
+
+      <button class="btn primary" style="margin-top: 10px;" (click)="search()">
+        Apply Filters
+      </button>
+    </div>
+
+    <!-- 🎉 RESULTS -->
+    <div class="results-section">
+
+      <h3 *ngIf="results.length > 0">Results</h3>
+
+      <div class="event-card" *ngFor="let e of results">
+        <h3 class="title">{{ e.title }}</h3>
+        <p class="desc">{{ e.description }}</p>
+
+        <div class="info">
+          <p><strong>Location:</strong> {{ e.location }}</p>
+          <p><strong>Start:</strong> {{ e.start_datetime | date:'medium' }}</p>
+          <p><strong>End:</strong> {{ e.end_datetime | date:'medium' }}</p>
+        </div>
+      </div>
+
+      <div class="no-results" *ngIf="results.length == 0 && (keyword || role || start || end)">
+        No events match your search.
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

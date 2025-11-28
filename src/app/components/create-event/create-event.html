@@ -1,0 +1,11 @@
+<h2>Create Event</h2>
+
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<input type="text" placeholder="Title" [(ngModel)]="title" />
+<input type="date" [(ngModel)]="date" />
+<input type="time" [(ngModel)]="time" />
+<input type="text" placeholder="Location" [(ngModel)]="location" />
+<textarea placeholder="Description" [(ngModel)]="description"></textarea>
+
+<button (click)="onCreate()">Create Event</button>
